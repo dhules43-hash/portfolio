@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin Dhule | Data Analyst Portfolio</title>
+  <meta name="description" content="Sachin Dhule — Results-driven Data Analyst specializing in SQL, Power BI, Python, and financial analytics. Based in Pune, Maharashtra, India." />
+  <meta name="keywords" content="Sachin Dhule, Data Analyst, SQL, Power BI, Python, Pune, Portfolio, Financial Analytics" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── SCROLL PROGRESS ─── -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ─── PRELOADER ─── -->
+  <div class="preloader" id="preloader">
+    <div class="pre-inner">
+      <div class="pre-logo">
+        <span class="pre-bracket">&lt;</span>SD<span class="pre-bracket">/&gt;</span>
+      </div>
+      <div class="pre-bar"><div class="pre-fill" id="preFill"></div></div>
+      <span class="pre-text">Loading portfolio…</span>
+    </div>
+  </div>
+
+  <!-- ─── CURSOR ─── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-bracket">&lt;</span>
+      <span class="brand-name">SD</span>
+      <span class="brand-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"       class="nav-link" id="nl-home">Home</a></li>
+      <li><a href="#about"      class="nav-link" id="nl-about">About</a></li>
+      <li><a href="#projects"   class="nav-link" id="nl-proj">Projects</a></li>
+      <li><a href="#contact"    class="nav-link" id="nl-contact">Contact</a></li>
+    </ul>
+    <a href="mailto:dhules43@gmail.com" class="nav-cta" id="nav-cta-btn">Hire Me</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <span class="toggle-sun">☀️</span>
+      <span class="toggle-moon">🌙</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+    <div class="dot-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-up" style="animation-delay:.1s">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-title animate-fade-up" style="animation-delay:.2s">
+        Hi, I'm<br><span class="gradient-text">Sachin Dhule</span>
+      </h1>
+
+      <div class="hero-role animate-fade-up" style="animation-delay:.3s">
+        <span class="role-static">I'm a&nbsp;</span>
+        <span class="role-dynamic" id="roleDynamic"></span>
+        <span class="role-cursor">|</span>
+      </div>
+
+      <p class="hero-desc animate-fade-up" style="animation-delay:.4s">
+        Transforming complex datasets into actionable business insights through
+        automated reporting, interactive dashboards, and data-driven decision-making.
+      </p>
+
+      <div class="hero-ctas animate-fade-up" style="animation-delay:.5s">
+        <a href="#projects" class="btn-primary" id="view-work-btn">
+          <span>View My Work</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:dhules43@gmail.com" class="btn-secondary" id="email-hero-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Let's Talk</span>
+        </a>
+        <a href="#" class="btn-download" id="download-cv-btn" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download CV</span>
+        </a>
+      </div>
+
+      <div class="hero-stats animate-fade-up" style="animation-delay:.6s">
+        <div class="stat-item">
+          <span class="stat-number" data-target="50">0</span><span class="stat-suffix">K+</span>
+          <span class="stat-label">Records Analyzed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Tech Skills</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Passion</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Creative Profile & Data Theme -->
+    <div class="hero-visual animate-fade-left" style="animation-delay:.4s">
+      
+      <!-- Profile Image Container -->
+      <div class="profile-wrapper">
+        <div class="profile-blob">
+          <img src="profile.jpg" alt="Sachin Dhule" class="profile-img">
+        </div>
+        
+        <!-- Data Analyst Accents -->
+        <div class="data-ring ring-1"></div>
+        <div class="data-ring ring-2"></div>
+        <div class="data-node node-1"></div>
+        <div class="data-node node-2"></div>
+      </div>
+
+
+    </div>
+
+    <div class="scroll-hint" id="scrollHint">
+      <div class="scroll-wheel"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ─── TOOLS STRIP ─── -->
+  <div class="tools-strip" id="tools">
+    <div class="strip-inner">
+      <span class="strip-label">TECH STACK</span>
+      <div class="tools-track">
+        <div class="tools-list" id="toolsList">
+          <span class="tool-item"><span class="tool-dot" style="background:#2563eb"></span>SQL</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#f59e0b"></span>Power BI</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#0ea5e9"></span>Python</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#22c55e"></span>Excel</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#8b5cf6"></span>DAX</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#ec4899"></span>Pandas</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#2563eb"></span>PostgreSQL</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#f59e0b"></span>Power Query</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#0ea5e9"></span>NumPy</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#22c55e"></span>MySQL</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#8b5cf6"></span>Git</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#ec4899"></span>ChatGPT</span>
+          <!-- duplicated for seamless loop -->
+          <span class="tool-item"><span class="tool-dot" style="background:#2563eb"></span>SQL</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#f59e0b"></span>Power BI</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#0ea5e9"></span>Python</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#22c55e"></span>Excel</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#8b5cf6"></span>DAX</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#ec4899"></span>Pandas</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#2563eb"></span>PostgreSQL</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#f59e0b"></span>Power Query</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#0ea5e9"></span>NumPy</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#22c55e"></span>MySQL</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#8b5cf6"></span>Git</span>
+          <span class="tool-item"><span class="tool-dot" style="background:#ec4899"></span>ChatGPT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── ACHIEVEMENTS ─── -->
+  <div class="achievements-strip" id="achievements">
+    <div class="container">
+      <div class="ach-grid">
+        <div class="ach-card reveal" id="ac-1">
+          <div class="ach-icon-wrap" style="--ac:#2563eb">📊</div>
+          <div class="ach-info">
+            <span class="ach-big" data-count="50" data-suffix="K+">0K+</span>
+            <span class="ach-label">Records Analyzed</span>
+          </div>
+        </div>
+        <div class="ach-card reveal" id="ac-2">
+          <div class="ach-icon-wrap" style="--ac:#f59e0b">🛠️</div>
+          <div class="ach-info">
+            <span class="ach-big" data-count="12" data-suffix="+">0+</span>
+            <span class="ach-label">Technologies Mastered</span>
+          </div>
+        </div>
+        <div class="ach-card reveal" id="ac-3">
+          <div class="ach-icon-wrap" style="--ac:#0ea5e9">⚡</div>
+          <div class="ach-info">
+            <span class="ach-big" data-count="100" data-suffix="%">0%</span>
+            <span class="ach-label">Reporting Accuracy</span>
+          </div>
+        </div>
+        <div class="ach-card reveal" id="ac-4">
+          <div class="ach-icon-wrap" style="--ac:#8b5cf6">📈</div>
+          <div class="ach-info">
+            <span class="ach-big" data-count="5" data-suffix="+">0+</span>
+            <span class="ach-label">BI Dashboards Built</span>
+          </div>
+        </div>
+        <div class="ach-card reveal" id="ac-5">
+          <div class="ach-icon-wrap" style="--ac:#22c55e">🎯</div>
+          <div class="ach-info">
+            <span class="ach-big" data-count="6" data-suffix="+">0+</span>
+            <span class="ach-label">Analytics Services</span>
+          </div>
+        </div>
+        <div class="ach-card reveal" id="ac-6">
+          <div class="ach-icon-wrap" style="--ac:#ec4899">🏆</div>
+          <div class="ach-info">
+            <span class="ach-big" data-count="1" data-suffix="">0</span>
+            <span class="ach-label">Certified Analyst</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Turning Data into <span class="gradient-text">Decisions</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="avatar-wrap">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">SD</div>
+            <div class="avatar-badge"><span>📊</span></div>
+          </div>
+          <div class="about-chips">
+            <span class="chip">SQL Expert</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Python</span>
+            <span class="chip">Financial Analytics</span>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p class="about-lead">
+            I'm a <strong>Results-driven Data Analyst</strong> based in Pune, Maharashtra with hands-on experience
+            transforming raw, complex datasets into powerful business narratives.
+          </p>
+          <p>
+            My expertise spans SQL, Power BI, Python, and Advanced Excel — tools I use daily to
+            build automated reporting pipelines, interactive dashboards, and financial analytics
+            frameworks that drive smarter decisions.
+          </p>
+          <p>
+            I specialize in <strong>financial analytics</strong> — budget vs actual variance, revenue analysis,
+            expense tracking, and collections — helping businesses uncover insights hidden in their numbers.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-val">Pune, Maharashtra, India</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🎓</span>
+              <div>
+                <span class="info-label">Education</span>
+                <span class="info-val">B.Com — TC College, Baramati</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📜</span>
+              <div>
+                <span class="info-label">Certification</span>
+                <span class="info-val">Data Analytics &amp; Python — Linkcode, 2025</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🤖</span>
+              <div>
+                <span class="info-label">AI Tools</span>
+                <span class="info-val">ChatGPT, Claude</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="mailto:dhules43@gmail.com" class="btn-primary" id="about-email-btn">
+              <span>Get In Touch</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROCESS ─── -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How I Work</span>
+        <h2 class="section-title">My <span class="gradient-text">Process</span></h2>
+        <p class="section-sub">A clear, structured approach to every analytics engagement — from raw data to boardroom-ready insights.</p>
+      </div>
+      <div class="process-grid">
+
+        <div class="process-step reveal" id="ps-1">
+          <div class="ps-connector"></div>
+          <div class="ps-icon-wrap">
+            <div class="ps-num">01</div>
+            <div class="ps-icon">🎯</div>
+          </div>
+          <div class="ps-body">
+            <h3>Understand</h3>
+            <p>Collaborate with stakeholders to define business objectives, gather requirements, and identify the right KPIs and data sources needed to answer the core questions.</p>
+            <div class="ps-tags"><span>Requirement Gathering</span><span>KPI Definition</span><span>Stakeholder Alignment</span></div>
+          </div>
+        </div>
+
+        <div class="process-step reveal" id="ps-2">
+          <div class="ps-connector"></div>
+          <div class="ps-icon-wrap">
+            <div class="ps-num">02</div>
+            <div class="ps-icon">🔍</div>
+          </div>
+          <div class="ps-body">
+            <h3>Analyse</h3>
+            <p>Extract, clean, and validate data using SQL and Python. Perform exploratory data analysis, statistical testing, and root cause investigation to surface meaningful patterns.</p>
+            <div class="ps-tags"><span>SQL / Python</span><span>EDA</span><span>Data Cleaning</span><span>Root Cause Analysis</span></div>
+          </div>
+        </div>
+
+        <div class="process-step reveal" id="ps-3">
+          <div class="ps-connector"></div>
+          <div class="ps-icon-wrap">
+            <div class="ps-num">03</div>
+            <div class="ps-icon">📊</div>
+          </div>
+          <div class="ps-body">
+            <h3>Visualise</h3>
+            <p>Build interactive Power BI dashboards and Excel reporting models with drill-downs, filters, and KPI cards — turning numbers into clear, compelling visual stories.</p>
+            <div class="ps-tags"><span>Power BI</span><span>DAX</span><span>Excel</span><span>Dashboard Design</span></div>
+          </div>
+        </div>
+
+        <div class="process-step reveal" id="ps-4">
+          <div class="ps-icon-wrap">
+            <div class="ps-num">04</div>
+            <div class="ps-icon">🚀</div>
+          </div>
+          <div class="ps-body">
+            <h3>Deliver</h3>
+            <p>Present actionable insights and recommendations to decision-makers. Automate recurring reports to ensure ongoing value, consistency, and speed in future reporting cycles.</p>
+            <div class="ps-tags"><span>Reporting</span><span>Automation</span><span>Presentation</span><span>Documentation</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Do</span>
+        <h2 class="section-title">Services &amp; <span class="gradient-text">Expertise</span></h2>
+        <p class="section-sub">Delivering end-to-end analytics solutions that help businesses make faster, smarter decisions.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="svc-card reveal" id="svc-1">
+          <div class="svc-num">01</div>
+          <div class="svc-icon" style="--svc-clr:#2563eb">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.36 6 2s-2.13 2-6 2-6-1.36-6-2 2.13-2 6-2zm0 14c-3.87 0-6-1.36-6-2v-1.77C7.37 16.06 9.57 16.5 12 16.5s4.63-.44 6-1.27V17c0 .64-2.13 2-6 2zm0-4c-3.87 0-6-1.36-6-2v-1.77C7.37 12.06 9.57 12.5 12 12.5s4.63-.44 6-1.27V13c0 .64-2.13 2-6 2z"/></svg>
+          </div>
+          <h3>SQL Data Engineering</h3>
+          <p>Writing advanced SQL queries using joins, CTEs, window functions, and subqueries to extract, clean, and transform business data into analytical-ready datasets.</p>
+          <div class="svc-tags">
+            <span>SQL</span><span>PostgreSQL</span><span>MySQL</span><span>ETL</span>
+          </div>
+        </div>
+
+        <div class="svc-card reveal" id="svc-2">
+          <div class="svc-num">02</div>
+          <div class="svc-icon" style="--svc-clr:#f59e0b">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </div>
+          <h3>Power BI Dashboards</h3>
+          <p>Building interactive Power BI dashboards with KPI cards, drill-down analysis, slicers, and DAX measures to visualize financial and operational performance in real-time.</p>
+          <div class="svc-tags">
+            <span>Power BI</span><span>DAX</span><span>Power Query</span><span>KPIs</span>
+          </div>
+        </div>
+
+        <div class="svc-card reveal" id="svc-3">
+          <div class="svc-num">03</div>
+          <div class="svc-icon" style="--svc-clr:#0ea5e9">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </div>
+          <h3>Financial Analytics</h3>
+          <p>Performing budget vs actual variance analysis, revenue tracking, expense monitoring, and financial KPI reporting to support strategic planning and cost optimisation.</p>
+          <div class="svc-tags">
+            <span>Variance</span><span>Revenue</span><span>Budget</span><span>Reporting</span>
+          </div>
+        </div>
+
+        <div class="svc-card reveal" id="svc-4">
+          <div class="svc-num">04</div>
+          <div class="svc-icon" style="--svc-clr:#8b5cf6">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+          </div>
+          <h3>Python Automation</h3>
+          <p>Automating data workflows, cleaning pipelines, and recurring reports using Python (Pandas, NumPy) to eliminate manual effort and ensure consistency and speed.</p>
+          <div class="svc-tags">
+            <span>Python</span><span>Pandas</span><span>NumPy</span><span>Automation</span>
+          </div>
+        </div>
+
+        <div class="svc-card reveal" id="svc-5">
+          <div class="svc-num">05</div>
+          <div class="svc-icon" style="--svc-clr:#22c55e">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15h2v2H8v-2zm4 0h2v2h-2v-2zm-4-4h2v2H8v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/></svg>
+          </div>
+          <h3>Excel Reporting Models</h3>
+          <p>Designing advanced Excel reporting models using Pivot Tables, XLOOKUP, SUMIFS, conditional formatting, and dynamic charts for management-ready financial reports.</p>
+          <div class="svc-tags">
+            <span>Excel</span><span>Pivot Tables</span><span>XLOOKUP</span><span>Dashboards</span>
+          </div>
+        </div>
+
+        <div class="svc-card reveal" id="svc-6">
+          <div class="svc-num">06</div>
+          <div class="svc-icon" style="--svc-clr:#ec4899">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h3>EDA &amp; Root Cause Analysis</h3>
+          <p>Conducting exploratory data analysis, hypothesis testing, and root cause investigations to uncover trends, anomalies, revenue leakage, and opportunities for improvement.</p>
+          <div class="svc-tags">
+            <span>EDA</span><span>Statistics</span><span>RCA</span><span>Insights</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal" id="sk-1">
+          <div class="skill-card-icon" style="--icon-clr:#2563eb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.36 6 2s-2.13 2-6 2-6-1.36-6-2 2.13-2 6-2zm0 14c-3.87 0-6-1.36-6-2v-1.77C7.37 16.06 9.57 16.5 12 16.5s4.63-.44 6-1.27V17c0 .64-2.13 2-6 2zm0-4c-3.87 0-6-1.36-6-2v-1.77C7.37 12.06 9.57 12.5 12 12.5s4.63-.44 6-1.27V13c0 .64-2.13 2-6 2z"/></svg></div>
+          <h3>Programming &amp; Querying</h3>
+          <div class="skill-list">
+            <span class="skill-tag">SQL</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Python</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span>
+            <span class="skill-tag">CTEs</span><span class="skill-tag">Window Functions</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="sk-2">
+          <div class="skill-card-icon" style="--icon-clr:#f59e0b"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
+          <h3>Business Intelligence</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Power BI</span><span class="skill-tag">DAX</span><span class="skill-tag">Power Query</span>
+            <span class="skill-tag">Data Modelling</span><span class="skill-tag">KPI Dashboards</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="sk-3">
+          <div class="skill-card-icon" style="--icon-clr:#22c55e"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15h2v2H8v-2zm4 0h2v2h-2v-2zm-4-4h2v2H8v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/></svg></div>
+          <h3>Advanced Excel</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Pivot Tables</span><span class="skill-tag">XLOOKUP</span><span class="skill-tag">SUMIFS</span>
+            <span class="skill-tag">COUNTIFS</span><span class="skill-tag">Conditional Formatting</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="sk-4">
+          <div class="skill-card-icon" style="--icon-clr:#ec4899"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/></svg></div>
+          <h3>Analytics Methods</h3>
+          <div class="skill-list">
+            <span class="skill-tag">EDA</span><span class="skill-tag">ETL</span><span class="skill-tag">Data Cleaning</span>
+            <span class="skill-tag">Statistical Analysis</span><span class="skill-tag">Hypothesis Testing</span><span class="skill-tag">RCA</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="sk-5">
+          <div class="skill-card-icon" style="--icon-clr:#0ea5e9"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+          <h3>Finance Analytics</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Budget vs Actual</span><span class="skill-tag">Revenue Analysis</span>
+            <span class="skill-tag">Variance Analysis</span><span class="skill-tag">Collections</span><span class="skill-tag">Financial Reporting</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="sk-6">
+          <div class="skill-card-icon" style="--icon-clr:#8b5cf6"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+          <h3>Customer &amp; Business Analytics</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Customer Segmentation</span><span class="skill-tag">RFM Analysis</span>
+            <span class="skill-tag">Cohort Analysis</span><span class="skill-tag">KPI Reporting</span><span class="skill-tag">Git</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Circular Skill Rings -->
+      <div class="skill-rings reveal" style="margin-top: 40px;">
+        <h3 class="prof-title" style="text-align:center;margin-bottom:30px">Core Proficiency</h3>
+        <div class="rings-container">
+          <div class="ring-item">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+              <circle class="ring-fg" cx="50" cy="50" r="40" data-pct="90" style="--ring-clr:#2563eb"></circle>
+            </svg>
+            <div class="ring-text">
+              <span class="ring-num" data-target="90">0</span>%
+            </div>
+            <span class="ring-label">SQL</span>
+          </div>
+          <div class="ring-item">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+              <circle class="ring-fg" cx="50" cy="50" r="40" data-pct="85" style="--ring-clr:#f59e0b"></circle>
+            </svg>
+            <div class="ring-text">
+              <span class="ring-num" data-target="85">0</span>%
+            </div>
+            <span class="ring-label">Power BI</span>
+          </div>
+          <div class="ring-item">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+              <circle class="ring-fg" cx="50" cy="50" r="40" data-pct="80" style="--ring-clr:#0ea5e9"></circle>
+            </svg>
+            <div class="ring-text">
+              <span class="ring-num" data-target="80">0</span>%
+            </div>
+            <span class="ring-label">Python</span>
+          </div>
+          <div class="ring-item">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+              <circle class="ring-fg" cx="50" cy="50" r="40" data-pct="88" style="--ring-clr:#22c55e"></circle>
+            </svg>
+            <div class="ring-text">
+              <span class="ring-num" data-target="88">0</span>%
+            </div>
+            <span class="ring-label">Excel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Career</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal" id="exp-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Data Analyst</h3>
+                <span class="tl-company">Professional Experience</span>
+              </div>
+              <span class="tl-badge">Current</span>
+            </div>
+            <div class="tl-achievements">
+              <div class="achievement"><span class="ach-icon">🛢️</span><p>Developed SQL queries using joins, CTEs, subqueries, and window functions to extract, transform, and analyse business and financial data.</p></div>
+              <div class="achievement"><span class="ach-icon">📊</span><p>Built interactive Power BI dashboards to monitor revenue, expenses, budget performance, collections, profitability, and key financial KPIs.</p></div>
+              <div class="achievement"><span class="ach-icon">✅</span><p>Performed data cleaning, validation, reconciliation, and quality checks across multiple datasets to improve reporting accuracy and data consistency.</p></div>
+              <div class="achievement"><span class="ach-icon">⚡</span><p>Automated recurring reporting processes using SQL, Python, Power Query, and Advanced Excel, reducing manual effort and improving turnaround time.</p></div>
+              <div class="achievement"><span class="ach-icon">📉</span><p>Conducted variance analysis to compare actual financial performance against budget and forecast values, identifying key business drivers and exceptions.</p></div>
+              <div class="achievement"><span class="ach-icon">🔍</span><p>Analysed financial and operational data to identify trends, anomalies, revenue leakage, cost variances, and opportunities for process improvement.</p></div>
+              <div class="achievement"><span class="ach-icon">🤝</span><p>Collaborated with cross-functional stakeholders to gather requirements, define KPIs, validate findings, and communicate insights through reports.</p></div>
+              <div class="achievement"><span class="ach-icon">🤖</span><p>Used Gen AI tools (ChatGPT, Claude) to accelerate SQL development, debug Python scripts, and draft financial insight summaries for stakeholders.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" id="exp-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card cert-card">
+            <div class="cert-badge-wrap">
+              <div class="cert-badge">
+                <div class="cert-icon">📜</div>
+                <div class="cert-ribbon">CERTIFIED</div>
+              </div>
+              <div class="cert-details">
+                <div class="tl-header" style="margin-bottom:10px">
+                  <div>
+                    <h3 class="tl-role">Data Analytics &amp; Python Certification</h3>
+                    <span class="tl-company">Linkcode Technology, Pune</span>
+                  </div>
+                  <span class="tl-badge cert">2025</span>
+                </div>
+                <p style="color:var(--text-muted);font-size:.88rem;line-height:1.65;margin-bottom:14px">Completed comprehensive training in data analytics workflows, Python programming, Pandas, NumPy, data visualization, SQL, and applied analytics for real-world business use cases.</p>
+                <div class="cert-skills">
+                  <span>Python</span><span>SQL</span><span>Pandas</span>
+                  <span>NumPy</span><span>Data Viz</span><span>EDA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" id="exp-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Bachelor of Commerce (B.Com)</h3>
+                <span class="tl-company">Tuljaram Chaturchand College, Baramati</span>
+              </div>
+              <span class="tl-badge edu">2022 – 2025</span>
+            </div>
+            <p style="color:var(--text-muted);margin-top:.75rem;font-size:.93rem;">Built a strong foundation in commerce, finance, accounting, and business principles — directly complementing analytical and financial analytics expertise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card featured reveal" id="proj-1">
+          <div class="proj-accent"></div>
+          <div class="proj-header">
+            <div class="proj-icon">💹</div>
+            <div class="proj-badges">
+              <span class="proj-badge">SQL</span>
+              <span class="proj-badge">Power BI</span>
+              <span class="proj-badge">Excel</span>
+              <span class="proj-badge">DAX</span>
+              <span class="proj-badge">Python</span>
+            </div>
+          </div>
+          <h3 class="proj-title">Finance Performance &amp; Budget Variance Analytics</h3>
+          <p class="proj-desc">End-to-end financial analytics project analyzing 50,000+ transaction records covering revenue, expenses, budgets, departments, and cost centres. Built SQL pipelines, Power BI dashboards, and Excel reporting models to deliver actionable financial insights.</p>
+          <div class="proj-highlights">
+            <div class="highlight">
+              <span class="hl-num">50K+</span>
+              <span class="hl-label">Records Processed</span>
+            </div>
+            <div class="highlight">
+              <span class="hl-num">Multi-Dept</span>
+              <span class="hl-label">Variance Analysis</span>
+            </div>
+            <div class="highlight">
+              <span class="hl-num">Auto</span>
+              <span class="hl-label">Reporting Pipeline</span>
+            </div>
+          </div>
+          <div class="proj-features">
+            <div class="feature-item"><span>✓</span>Budget vs Actual framework with monthly &amp; departmental variances</div>
+            <div class="feature-item"><span>✓</span>Power BI dashboard with KPI cards, drill-down, YTD &amp; period-over-period metrics</div>
+            <div class="feature-item"><span>✓</span>DAX measures for variance %, budget utilisation, YTD performance</div>
+            <div class="feature-item"><span>✓</span>Excel model with Pivot Tables, XLOOKUP, SUMIFS &amp; conditional formatting</div>
+            <div class="feature-item"><span>✓</span>Root cause investigation for high-cost departments &amp; revenue shortfalls</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kind Words</span>
+        <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
+        <p class="section-sub">Feedback from colleagues, mentors, and collaborators on my analytical work and professional approach.</p>
+      </div>
+      <div class="testi-carousel" id="testiCarousel">
+        <div class="testi-track" id="testiTrack">
+
+          <div class="testi-card" id="tc-1">
+            <div class="testi-quote">“”</div>
+            <p class="testi-text">Sachin has an exceptional ability to dive deep into complex financial datasets and emerge with insights that are immediately actionable. His Power BI dashboards transformed how our team reviews monthly performance &mdash; clean, intuitive, and always accurate.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="--av-bg:#2563eb">RK</div>
+              <div>
+                <strong>Rajesh Kumar</strong>
+                <span>Finance Manager &middot; Pune</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card" id="tc-2">
+            <div class="testi-quote">“”</div>
+            <p class="testi-text">The SQL pipelines Sachin built for our reporting workflow reduced our monthly close process by nearly 40%. His attention to data quality and automated validation checks gave us complete confidence in the numbers every single time.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="--av-bg:#0ea5e9">PM</div>
+              <div>
+                <strong>Priya Mehta</strong>
+                <span>Operations Analyst &middot; Mumbai</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card" id="tc-3">
+            <div class="testi-quote">“”</div>
+            <p class="testi-text">What sets Sachin apart is his genuine curiosity about the business context behind the data. He doesn’t just answer the question you asked &mdash; he finds the question you should have asked. A truly valuable data professional.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="--av-bg:#8b5cf6">AS</div>
+              <div>
+                <strong>Amit Sharma</strong>
+                <span>Business Analyst &middot; Pune</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card" id="tc-4">
+            <div class="testi-quote">“”</div>
+            <p class="testi-text">Sachin delivered a comprehensive budget variance analysis that identified over ₹12 lakh in cost overruns we hadn’t caught. His root cause breakdown was methodical, well-documented, and directly informed our next quarter’s budget planning.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="--av-bg:#f59e0b">NP</div>
+              <div>
+                <strong>Neha Patil</strong>
+                <span>CFO Office &middot; Pune</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="testi-controls">
+          <button class="testi-btn" id="testiBtnPrev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="testi-dots" id="testiDots">
+            <button class="testi-dot active" data-idx="0" id="tdot-0"></button>
+            <button class="testi-dot" data-idx="1" id="tdot-1"></button>
+            <button class="testi-dot" data-idx="2" id="tdot-2"></button>
+            <button class="testi-dot" data-idx="3" id="tdot-3"></button>
+          </div>
+          <button class="testi-btn" id="testiBtnNext" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA BANNER ─── -->
+  <section class="cta-banner" id="cta-banner">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div class="cta-text">
+          <h2>Ready to turn your data into insights?</h2>
+          <p>Let's build something powerful together — dashboards, pipelines, or financial models.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="mailto:dhules43@gmail.com" class="btn-primary" id="cta-email-btn">
+            <span>Send an Email</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:+919356991418" class="btn-secondary-white" id="cta-phone-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-sub">Have a project in mind or looking for a data analyst? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Contact Information</h3>
+          <div class="contact-items">
+            <a href="mailto:dhules43@gmail.com" class="contact-item" id="ci-email">
+              <div class="ci-icon" style="--ci-clr:#2563eb">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div>
+                <span class="ci-label">Email</span>
+                <span class="ci-value">dhules43@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+919356991418" class="contact-item" id="ci-phone">
+              <div class="ci-icon" style="--ci-clr:#22c55e">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div>
+                <span class="ci-label">Phone</span>
+                <span class="ci-value">+91-9356991418</span>
+              </div>
+            </a>
+            <div class="contact-item" id="ci-location">
+              <div class="ci-icon" style="--ci-clr:#f59e0b">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div>
+                <span class="ci-label">Location</span>
+                <span class="ci-value">Pune, Maharashtra, India</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn" id="linkedin-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-btn" id="github-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" name="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about your project or opportunity…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width" id="submit-btn">
+            <span>Send Message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <div class="footer-brand-lg">
+            <span class="brand-bracket">&lt;</span>
+            <span class="brand-name">SD</span>
+            <span class="brand-bracket">/&gt;</span>
+          </div>
+          <p class="footer-bio">Results-driven Data Analyst turning complex data into clear business decisions through SQL, Power BI, and Python.</p>
+          <div class="footer-socials">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" id="footer-linkedin" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" id="footer-github" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+            </a>
+            <a href="mailto:dhules43@gmail.com" class="footer-social-btn" id="footer-email" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Skills</h4>
+          <ul class="footer-nav">
+            <li><span>SQL &amp; PostgreSQL</span></li>
+            <li><span>Power BI &amp; DAX</span></li>
+            <li><span>Python (Pandas, NumPy)</span></li>
+            <li><span>Advanced Excel</span></li>
+            <li><span>Financial Analytics</span></li>
+            <li><span>EDA &amp; Root Cause Analysis</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="fci">📧</span>
+              <a href="mailto:dhules43@gmail.com">dhules43@gmail.com</a>
+            </li>
+            <li>
+              <span class="fci">📞</span>
+              <a href="tel:+919356991418">+91-9356991418</a>
+            </li>
+            <li>
+              <span class="fci">📍</span>
+              <span>Pune, Maharashtra, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 <strong>Sachin Dhule</strong>. All rights reserved.</p>
+        <p class="footer-made">Built with ❤️ in Pune, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
