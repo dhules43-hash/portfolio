@@ -1,0 +1,11 @@
+numpy
+scipy
+opencv-python-headless
+Pillow
+bpy==5.3.0          # Blender as a Python module (Cycles CPU rendering, no GPU needed)
+kokoro-onnx         # offline neural narration
+soundfile
+# system: ffmpeg (libx264, aac)
+# Kokoro model files (download once, ~350 MB) into KOKORO_DIR:
+#   https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+#   https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
