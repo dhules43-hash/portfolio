@@ -1,0 +1,88 @@
+{
+  "video_settings": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "aspect_ratio": "9:16",
+    "caption_style": "bold white sans-serif with thick black outline",
+    "caption_position": "lower-center-safe-area"
+  },
+  "style_profile": "cinematic_storyworld",
+  "visual_beat_seconds": [
+    1.0,
+    3.0
+  ],
+  "continuity": {
+    "lock_main_character_reference": true,
+    "lock_costume_and_palette": true,
+    "lock_environment_landmarks": true,
+    "no_baked_in_subtitles": true
+  },
+  "scene_example": {
+    "id": "scene_01_reveal",
+    "start_sec": 0.0,
+    "end_sec": 5.0,
+    "environment": "medieval throne room",
+    "shot_size": "medium_to_closeup",
+    "camera": {
+      "start": {
+        "zoom": 1.0,
+        "pan_x": 0.0,
+        "pan_y": 0.0
+      },
+      "end": {
+        "zoom": 1.18,
+        "pan_x": 0.02,
+        "pan_y": -0.01
+      },
+      "movement": "smooth_dolly_in"
+    },
+    "character_action": "main character reacts with a shocked expression",
+    "lighting": "warm amber torchlight with soft gold highlights",
+    "visual_beats": [
+      {
+        "time_sec": 0.0,
+        "event": "establish throne room"
+      },
+      {
+        "time_sec": 1.4,
+        "event": "character turns toward the reveal"
+      },
+      {
+        "time_sec": 2.8,
+        "event": "push in to reaction close-up"
+      },
+      {
+        "time_sec": 4.0,
+        "event": "cut to important prop"
+      }
+    ],
+    "caption_chunks": [
+      {
+        "start_sec": 0.0,
+        "end_sec": 0.65,
+        "text": "He"
+      },
+      {
+        "start_sec": 0.65,
+        "end_sec": 1.25,
+        "text": "never"
+      },
+      {
+        "start_sec": 1.25,
+        "end_sec": 2.0,
+        "text": "expected"
+      }
+    ],
+    "foley_cues": [
+      {
+        "time_sec": 0.1,
+        "type": "camera_whoosh"
+      },
+      {
+        "time_sec": 2.8,
+        "type": "impact_or_reaction"
+      }
+    ]
+  }
+}
