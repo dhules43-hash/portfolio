@@ -1,6 +1,6 @@
 # Red Cliffs (208 AD): The Chains That Burned an Empire
 
-Voiceover: OpenAI *onyx* voice (via Speko), 1.08x, 2:29. Made with the  skill.
+Voiceover: OpenAI "onyx" voice (via Speko), 1.08x speed, 2:29. Made with the historical-map-animation skill.
 
 | # | Time | Voiceover |
 |---|---|---|
